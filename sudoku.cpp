@@ -119,18 +119,21 @@ bool solveSuduko(int grid[N][N], int row, int col)
 int main()
 {
 	// 0 means unassigned cells
-	int grid[N][N] = { { 0, 5, 0, 3, 1, 4, 0, 6, 0 },
-					{ 8, 7, 0, 0, 0, 9, 4, 0, 3 },
-					{ 6, 4, 3, 5, 0, 7, 1, 9, 2 },
-					{ 0, 0, 7, 8, 0, 5, 2, 1, 0 },
-					{ 4, 1, 0, 9, 0, 0, 0, 0, 0 },
-					{ 0, 2, 5, 0, 6, 1, 9, 0, 7 },
-					{ 7, 9, 0, 2, 5, 0, 8, 4, 0 },
-					{ 0, 0, 4, 0, 9, 6, 0, 0, 5 },
-					{ 0, 3, 0, 1, 0, 8, 6, 7, 0 } };
-
-	if (solveSuduko(grid, 0, 0))
+	int grid[N][N];
+	cout<<"Enter the unsolved sudoku of 9X9 \n";
+	for (int i = 0; i < 9; i++)
+	{
+		for (int j = 0; j < 9; j++)
+		{
+			cin>>grid[i][j];
+		}
+		
+	}
+	
+	if (solveSuduko(grid, 0, 0)){
+		cout<< "OUTPUT:\n";
 		print(grid);
+	}
 	else
 		cout << "no solution exists " << endl;
 
